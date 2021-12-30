@@ -16,17 +16,6 @@
   
 
   
-      ,"page2": {
-          "title": "blog",
-          "content": "",
-          "url": "https://antounes.github.io/science/_pages/blog.html",
-          "relUrl": "/_pages/blog.html",
-          "date": ""
-      }
-      
-  
-
-  
 
   
   
@@ -44,7 +33,7 @@
   
 
   
-      ,"page9": {
+      ,"page8": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://antounes.github.io/science/robots.txt",
