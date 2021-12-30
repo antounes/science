@@ -1,22 +1,11 @@
 {
   
-    
-        "post0": {
-            "title": "Classifying Bicycle Spare Parts with Deep Learning: A Trial",
-            "content": "This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory. Note: This notebook is implemented with fast.ai and PyTorch, and is greatly inspired from Howard&#39;s and Gugger&#39;s book Deep Learning for Coders with fast.ai and PyTorch. . Introduction . The goal here is to build a classifier for distinguishing between bicycle spare parts. When looking for parts, one of the most tedious tasks is to differentiate between different versions of a given part called a cassette. The cassette is a block of sprockets located on the bicycle rear wheel and ensuring the transmission of the power applied on the pedals to the rear wheel via the chain, hence making the bike moving forward. Most today&#39;s bicycle drivetrains use either 10-, 11- or 12-sprocket cassettes. Distinguishing between these at first glance is not easy, as can be seen below. In fact what we just see is just a mass of cogs. . . Distinguishing between types of cassettes is crucial though, because not all cassettes can be used with all chains and all shifters on a bicycle. 10-speed cassettes go with 10-speed drivetrains, etc. . On could argue that it&#39;s just about counting the sprockets, or reading the numbers written on the lockring (the smallest and darkest ring of the cassette), but it&#39;s not always as easy, especially with greasy or muddy parts, or even with old ones where nothing can be read anymore. . Let&#39;s assess if such objects are understandable and can be represented in such a manner that a neural network can distinguish between their types. . Gathering Data . First we need to install some utilities provided by fast.ai authors, namely the fastbook library. This library comes with classes and modules that will help us setting up deep learing models. . fast.ai authors have built a tool that allows to download images from search engines, thus ensuring we can build our image dataset. Here we&#39;ll be using the most up-to-date version of the class, scrapping images from DuckDuckGo search results. For the sake of time-saving and reproducibility, we&#39;ll limit the dataset to 100 images of each type of cassette we&#39;re trying to identify. . Images are scrapped from the Internet and stored in a folder created for each type of cassette. Some additional steps consist of checking if all images are in the create folders and if there are no corrupted files, since they&#39;ve been downloaded from the Internet. Corrupted files are eventually discarded. . 384 downloaded files. 1 corrupted file(s). . Let&#39;s have a look at a couple of images from each class we want our model to identify . From Data to DataLoaders .",
-            "url": "https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning.html",
-            "relUrl": "/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning.html",
-            "date": " • Dec 30, 2021"
-        }
-        
-    
-  
 
   
   
 
   
-      ,"page1": {
+      "page1": {
           "title": "about",
           "content": "I’m a research data scientist navigating the field of what’s for show called AI. In fact, I’m keen on probability theory, linear algebra, machine learning and deep learning.I love approaching problems in a rigorously scientific manner, finding beautiful solutions and explaining them well. This blog is my workbook, it’s been continuously updated since December 2021 so as to keep a track of my research progress. .",
           "url": "https://antounes.github.io/science/about/",
