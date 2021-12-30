@@ -8,6 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Classifying Bicycle Spare Parts with Deep Learning - A Trial" />
 <meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the first post of my research work on convolutional neural networks, a family of neural networks mostly used (but not only) for solving computer vision problems. This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory." />
+<meta property="og:description" content="This is the first post of my research work on convolutional neural networks, a family of neural networks mostly used (but not only) for solving computer vision problems. This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory." />
 <link rel="canonical" href="https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html" />
 <meta property="og:url" content="https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html" />
 <meta property="og:site_name" content="antounes’ blog" />
@@ -16,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Classifying Bicycle Spare Parts with Deep Learning - A Trial" />
 <script type="application/ld+json">
-{"url":"https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html","headline":"Classifying Bicycle Spare Parts with Deep Learning - A Trial","dateModified":"2021-12-30T00:00:00-06:00","datePublished":"2021-12-30T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html"},"@context":"https://schema.org"}</script>
+{"url":"https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html","headline":"Classifying Bicycle Spare Parts with Deep Learning - A Trial","dateModified":"2021-12-30T00:00:00-06:00","datePublished":"2021-12-30T00:00:00-06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://antounes.github.io/science/2021/12/30/Classifying-Bicycle-Spare-Parts-with-Deep-Learning-,-A-Trial.html"},"description":"This is the first post of my research work on convolutional neural networks, a family of neural networks mostly used (but not only) for solving computer vision problems. This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/science/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://antounes.github.io/science/feed.xml" title="antounes' blog" /><link rel="shortcut icon" type="image/x-icon" href="/science/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,7 +89,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Classifying Bicycle Spare Parts with Deep Learning - A Trial</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-30T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Classifying Bicycle Spare Parts with Deep Learning - A Trial</h1><p class="page-description">This is the first post of my research work on convolutional neural networks, a family of neural networks mostly used (but not only) for solving computer vision problems. This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-30T00:00:00-06:00" itemprop="datePublished">
         Dec 30, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -131,23 +133,14 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the first post of my research work on convolutional neural networks, a family of neural networks mostly used (but not only) for solving computer vision problems. This personal research work should help me getting a sound understanding of how convolutional neural networks work under the hood. Notebooks help mixing computer science practice and deep learning theory.</p>
-<p>This notebook is implemented with fast.ai and PyTorch, and is greatly inspired from Howard's and Gugger's book <em>Deep Learning for Coders with fast.ai and PyTorch</em>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The goal here is to build a classifier for distinguishing between bicycle spare parts. When looking for parts, one of the most tedious tasks is to differentiate between different versions of a given part called a cassette. The cassette is a block of sprockets located on the bicycle rear wheel and ensuring the transmission of the power applied on the pedals to the rear wheel via the chain, hence making the bike moving forward. Most today's bicycle drivetrains use either 10-, 11- or 12-sprocket cassettes. Distinguishing between these at first glance is not easy, as can be seen below. In fact what we see is just a mass of cogs.</p>
-<p><img src="/science/images/copied_from_nb/images/cassettes.png" alt="" />
-<em>From left to right: 10-, 11- and 12-speed cassettes</em></p>
+<p>The goal here is to build a classifier for distinguishing between bicycle spare parts. When looking for parts, one of the most tedious tasks is to differentiate between different versions of a given part called a cassette. The cassette is a block of sprockets located on the bicycle rear wheel and ensuring the transmission of the power applied on the pedals to the rear wheel via the chain, hence making the bike moving forward. Most today's bicycle drivetrains use either 10-, 11- or 12-sprocket cassettes. Distinguishing between these at first glance is not easy, as can be seen below. In fact what we just see is just a mass of cogs.</p>
+<p><img src="/science/images/copied_from_nb/images/cassettes.png" alt="" title="From left to right: 10-, 11- and 12-speed cassettes" /></p>
 <p>Distinguishing between types of cassettes is crucial though, because not all cassettes can be used with all chains and all shifters on a bicycle. 10-speed cassettes go with 10-speed drivetrains, etc.</p>
 <p>On could argue that it's just about counting the sprockets, or reading the numbers written on the lockring (the smallest and darkest ring of the cassette), but it's not always as easy, especially with greasy or muddy parts, or even with old ones where nothing can be read anymore.</p>
 <p>Let's assess if such objects are understandable and can be represented in such a manner that a neural network can distinguish between their types.</p>
