@@ -6,7 +6,7 @@
 
 https://antounes.github.io/science/
 
-# My Blog
+# My data science blog
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
