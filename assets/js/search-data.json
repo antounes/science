@@ -21,8 +21,6 @@
   
 
   
-
-  
   
 
   
@@ -35,7 +33,7 @@
   
 
   
-      ,"page9": {
+      ,"page8": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://antounes.github.io/science-blog/robots.txt",
