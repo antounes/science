@@ -1,1 +1,1 @@
-Sitemap: https://antounes.github.io/sitemap.xml
+Sitemap: https://antounes.github.io/science-blog/sitemap.xml
