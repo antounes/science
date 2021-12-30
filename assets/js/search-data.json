@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "Title",
+            "content": "Let&#39;s try to build a model that recognises country flags. . Gathering Data . !pip install -Uqq fastbook import fastbook fastbook.setup_book() from fastbook import * . flags = (&#39;Russia&#39;, &#39;Ukraine&#39;, &#39;France&#39;, &#39;Spain&#39;, &#39;Sweden&#39;, &#39;Norway&#39;, &#39;Germany&#39;, &#39;Finland&#39;, &#39;Poland&#39;, &#39;Italy&#39;, &#39;United Kingdom&#39;, &#39;Romania&#39; , &#39;Belarus&#39;, &#39;Kazakhstan&#39;, &#39;Greece&#39;, &#39;Bulgaria&#39;, &#39;Iceland&#39;, &#39;Hungary&#39;, &#39;Portugal&#39;, &#39;Serbia&#39;, &#39;Austria&#39;, &#39;Czech Republic&#39; , &#39;Ireland&#39;, &#39;Lithuania&#39;, &#39;Latvia&#39;, &#39;Croatia&#39;, &#39;Bosnia and Herzegovina&#39;, &#39;Slovakia&#39;, &#39;Estonia&#39;, &#39;Denmark&#39;, &#39;Switzerland&#39;, &#39;Netherlands&#39;, &#39;Moldova&#39;, &#39;Belgium&#39;, &#39;Albania&#39;, &#39;North Macedonia&#39;, &#39;Turkey&#39;, &#39;Slovenia&#39;, &#39;Montenegro&#39;, &#39;Kosovo&#39;, &#39;Azaerbaijan&#39;, &#39;Luxembourg&#39;, &#39;Georgia&#39;, &#39;Andorra&#39;, &#39;Malta&#39;, &#39;Liechtenstein&#39;, &#39;San Marino&#39;, &#39;Monaco&#39;, &#39;Vatican City&#39;, &#39;Cyprus&#39;, &#39;Armenia&#39;) path = Path(&#39;flags&#39;) if not path.exists(): path.mkdir() for f in flags: dest = (path/f) dest.mkdir(exist_ok=True) results = search_images_ddg(&#39;{} flag&#39;.format(f), max_images=100) download_images(urls=results, dest=dest) . fns = get_image_files(path) fns . (#5372) [Path(&#39;flags/Albania/00000035.jpg&#39;),Path(&#39;flags/Albania/00000030.jpg&#39;),Path(&#39;flags/Albania/00000071.jpg&#39;),Path(&#39;flags/Albania/00000008.jpg&#39;),Path(&#39;flags/Albania/00000025.jpg&#39;),Path(&#39;flags/Albania/00000077.jpeg&#39;),Path(&#39;flags/Albania/00000050.png&#39;),Path(&#39;flags/Albania/00000018.jpg&#39;),Path(&#39;flags/Albania/00000006.jpg&#39;),Path(&#39;flags/Albania/00000057.jpg&#39;)...] . failed = verify_images(fns) failed . (#82) [Path(&#39;flags/Greece/00000006.jpg&#39;),Path(&#39;flags/Moldova/00000002.jpg&#39;),Path(&#39;flags/Romania/00000040.jpg&#39;),Path(&#39;flags/Liechtenstein/00000012.svg&#39;),Path(&#39;flags/Liechtenstein/00000069.svg&#39;),Path(&#39;flags/Lithuania/00000090.jpg&#39;),Path(&#39;flags/Lithuania/00000064.jpg&#39;),Path(&#39;flags/Czech Republic/00000089.jpg&#39;),Path(&#39;flags/Slovenia/00000024.jpg&#39;),Path(&#39;flags/Denmark/00000137.jpg&#39;)...] . failed.map(Path.unlink); . From Data to DataLoaders . # Use DataLoaders object .",
+            "url": "https://antounes.github.io/science-blog/2021/12/30/Notebook-test.html",
+            "relUrl": "/2021/12/30/Notebook-test.html",
+            "date": " • Dec 30, 2021"
+        }
+        
+    
+  
 
   
   
 
   
-      "page1": {
+      ,"page1": {
           "title": "About Me",
           "content": "I’m a research data scientist navigating the field of what’s for show called AI. In fact, I’m keen on math, linear algebra, machine learning and deep learning. I love to approach problems in a rigorously scientific manner, find beautiful solutions and explain them well. This blog is my workbook, I’ll try to keep it up to date as often as possible, so as to keep a track of my research progress. .",
           "url": "https://antounes.github.io/science-blog/about/",
