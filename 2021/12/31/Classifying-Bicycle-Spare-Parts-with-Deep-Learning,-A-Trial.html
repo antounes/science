@@ -146,6 +146,21 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The goal here is to build a classifier for distinguishing between bicycle spare parts. When looking for parts, one of the most tedious tasks is to differentiate between different versions of a given part called a cassette. The cassette is a block of sprockets located on the bicycle rear wheel and ensuring the transmission of the power applied on the pedals to the rear wheel via the chain, hence making the bike moving forward. Most today's bicycle drivetrains use either 10-, 11- or 12-sprocket cassettes. Distinguishing between these at first glance is not easy, as can be seen below. In fact what we just see is just a mass of cogs.</p>
+<table>
+<thead><tr>
+<th>A 10-speed cassette</th>
+<th>An 11-speed cassette</th>
+<th>A 12-speed cassette</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/science/images/copied_from_nb/images/10sp-cassette.jpeg" alt="" /></td>
+<td><img src="images/11sp-cassette.jpeg" alt="" /></td>
+<td><img src="images/12sp-cassette.jpeg" alt="" /></td>
+</tr>
+</tbody>
+</table>
 <p>Distinguishing between types of cassettes is crucial though, because not all cassettes can be used with all chains and all shifters on a bicycle. 10-speed cassettes go with 10-speed drivetrains, etc.</p>
 <p>On could argue that it's just about counting the sprockets, or reading the numbers written on the lockring (the smallest and darkest ring of the cassette), but it's not always as easy, especially with greasy or muddy parts, or even with old ones where nothing can be read anymore.</p>
 <p>Let's assess if such objects are understandable and can be represented in such a manner that a neural network can distinguish between their types.</p>
