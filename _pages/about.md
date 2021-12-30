@@ -4,8 +4,4 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+I’m a research data scientist navigating the field of what’s for show called AI. In fact, I’m keen on math, linear algebra, machine learning and deep learning. I love to approach problems in a rigorously scientific manner, find beautiful solutions and explain them well. This blog is my workbook, I’ll try to keep it up to date as often as possible, so as to keep a track of my research progress.
